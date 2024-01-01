@@ -1,0 +1,6 @@
+[submodule "zion_zed_ros_interface"]
+	path = zion_zed_ros_interface
+	url = git@github.com:nimiCurtis/zion_zed_ros_interface.git
+[submodule "zion_msgs"]
+	path = zion_msgs
+	url = git@github.com:nimiCurtis/zion_msgs.git
