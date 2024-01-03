@@ -13,7 +13,7 @@
 ## Overview
 This package lets you use the software packages of Zion wearable system which includes Nvidia Jetson Orin platform and Stereolabs ZED mini camera. It provides access to the following:
 
-  - All of ZED camera features and data as it described in - [zed-ros-wrapper](https://github.com/stereolabs/zed-ros-wrapper/tree/master/images)
+  - All of ZED camera features and data as it described in - [zed-ros-wrapper](https://github.com/stereolabs/zed-ros-wrapper/tree/master)
   - Bag recording interface 
 
 ---
@@ -90,10 +90,9 @@ $ rosrun zion_zed_ros_interface zed_recording_node.py
 - Stopping record will terminate the rosbag record and save the bag but the recording node will keep spinning such that you can record again by using the service
 
 
-
 ---
 
 ### TODO: 
 - [ ] Images of the system
-- [ ] Images from rviz 
+- [ ] Images from rviz  
 - [ ] readme for every package ? 
