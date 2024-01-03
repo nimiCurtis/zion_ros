@@ -52,6 +52,8 @@ $ git pull --recurse-submodules # update recursively all the submodules
 
 ### Python Dependencies
 
+*** The below section is irelevant for now! ***
+
 For python dependencies installation, open a terminal and use the ```install.sh``` file.
 
 **For PC platform:**
@@ -85,14 +87,18 @@ $ roslaunch zion_zed_ros_interface zed_operate.launch.py
 $ rosrun zion_zed_ros_interface zed_recording_node.py
 ```
 
-- The node is starting a recording session of the topics specified in the {TODO} ```.yaml```. Adjust this file if needed.
-- Select to start/stop recording by using the service ```~record```
+- The node is starting a recording session of the topics specified in the {TODO} ```.yaml```. Adjust this file if needed or change parameters directly 
+- Select to start/stop recording by using the service ```~record ``` as follow:
+```bash
+rosservice call /zion/zed_recording_node/record "data: false" # false -> stop recording
+```
+
+
 - Stopping record will terminate the rosbag record and save the bag but the recording node will keep spinning such that you can record again by using the service
 
 
 ---
 
 ### TODO: 
-- [ ] Add docs for every script
-- [ ] Update the recording config file
 - [ ] Images of the system
+- [ ] Add requierments and update install.sh
