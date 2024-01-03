@@ -87,10 +87,11 @@ $ roslaunch zion_zed_ros_interface zed_operate.launch.py
 $ rosrun zion_zed_ros_interface zed_recording_node.py
 ```
 
-- The node is starting a recording session of the topics specified in the {TODO} ```.yaml```. Adjust this file if needed or change parameters directly 
-- Select to start/stop recording by using the service ```~record ``` as follow:
+- The node is starting a recording session of the topics specified in the ```zion_zed_ros_interface/params/record.yaml```. Adjust this file if needed. You can use CLI to choose different destination folder prefix and select the list of topics you manage to record. 
+- Select start/stop recording by using the service ```~record ``` as follow:
 ```bash
 rosservice call /zion/zed_recording_node/record "data: false" # false -> stop recording
+                                                              # true -> start recording
 ```
 
 
