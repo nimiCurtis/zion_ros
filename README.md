@@ -52,9 +52,8 @@ $ git pull --recurse-submodules # update recursively all the submodules
 
 ### Python Dependencies
 
-*** The below section is irelevant for now! ***
-
-For python dependencies installation, open a terminal and use the ```install.sh``` file.
+TBD .. 
+<!-- For python dependencies installation, open a terminal and use the ```install.sh``` file.
 
 **For PC platform:**
 ```bash
@@ -64,7 +63,7 @@ $ ./install.sh
 **For Jetson Orin platform:**
 ```bash
 $ ./install.sh jet
-```
+``` -->
 
 <!-- ## Known issues -->
 
@@ -103,4 +102,4 @@ $ rosservice call /zion/zed_recording_node/record "data: false" # false -> stop 
 ### TODO: 
 - [ ] List of topics from CLI
 - [ ] Images of the system
-- [ ] Add requierments and update install.sh
+- [ ] Add dependencies, requierments and update install.sh
