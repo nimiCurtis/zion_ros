@@ -33,7 +33,7 @@ This package lets you use the software packages of Zion wearable system which in
 To install the **zion_ros2**, open a bash terminal, clone the package from Github, and build it:
 
 ```bash
-$ cd ~/ros2_ws/src/ 
+$ cd ~/catkin_ws/src/ 
 $ git clone --recursive https://github.com/nimiCurtis/zion_ros
 $ cd ..
 $ rosdep install --from-paths src --ignore-src -r -y
@@ -93,6 +93,6 @@ $ rosrun zion_zed_ros_interface zed_recording_node.py
 ---
 
 ### TODO: 
+- [ ] Add docs for every script
+- [ ] Update the recording config file
 - [ ] Images of the system
-- [ ] Images from rviz  
-- [ ] readme for every package ? 
