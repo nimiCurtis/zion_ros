@@ -91,7 +91,7 @@ $ rosrun zion_zed_ros_interface zed_recording_node.py
 - Select start/stop recording by using the service ```~record ``` as follow:
 ```bash
 $ rosservice call /zion/zed_recording_node/record "data: false" # false -> stop recording
-                                                              # true -> start recording
+                                                                # true -> start recording
 ```
 
 
@@ -101,5 +101,6 @@ $ rosservice call /zion/zed_recording_node/record "data: false" # false -> stop 
 ---
 
 ### TODO: 
+- [ ] List of topics from CLI
 - [ ] Images of the system
 - [ ] Add requierments and update install.sh
