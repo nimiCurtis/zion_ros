@@ -100,6 +100,7 @@ $ rosservice call /zion/zed_recording_node/record "data: false" # false -> stop 
 ---
 
 ### TODO: 
+- [ ] Reset the odometry when start recording
 - [ ] List of topics from CLI
 - [ ] Images of the system
 - [ ] Add dependencies, requierments and update install.sh
