@@ -4,3 +4,6 @@
 [submodule "zion_msgs"]
 	path = zion_msgs
 	url = git@github.com:nimiCurtis/zion_msgs.git
+[submodule "zion_turtlebot3"]
+	path = zion_turtlebot3
+	url = git@github.com:nimiCurtis/zion_turtlebot3.git
