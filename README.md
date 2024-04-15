@@ -23,7 +23,7 @@ This package lets you use the software packages of Zion wearable system which in
 ### Prerequisites
 
 - [Ubuntu 20.04 (Focal Fossa)](https://releases.ubuntu.com/focal/) / [JetPack](https://docs.nvidia.com/sdk-manager/install-with-sdkm-jetson/index.html)>=5.1
-- [ZED SDK](https://www.stereolabs.com/developers/release/latest/) >= v4.0.6 
+- [ZED SDK](https://www.stereolabs.com/developers/release/latest/) >= v4.8 
 - [CUDA](https://developer.nvidia.com/cuda-downloads)
 - [ROS Noetic](https://wiki.ros.org/noetic/Installation/Ubuntu)
 - [zed-ros-wrapper (v4.0.6 release or newer)](https://github.com/stereolabs/zed-ros-wrapper) 
@@ -80,22 +80,32 @@ To start the **zion_ros** nodes, open a terminal and use the command `roslaunch`
 $ roslaunch zion_zed_ros_interface zed_operate.launch.py
 ```
 - Adjust the camera parameters at [zion_zed_ros_interface/params](zion_zed_ros_interface/params)
+- The launch file is also launching the ```obj_detect_publisher_node``` when setting the arg ```publish_obj_det``` to **true**
+
+#### Object detection converter publisher:
+- Node name: 
+```obj_detect_publisher_node```
+- This node is responsible for pulling the specific object instance from the object list publishing by the ```zed_node``` and publish it seperatly in different topic , based on the parameters in ```zion_zed_ros_interface/params/obj_detect_converter.yaml```
+- Adjust the node parameters at [zion_zed_ros_interface/params/obj_detect_converter.yaml](zion_zed_ros_interface/params/obj_detect_converter.yaml)
+- You can modify the object instance to listen to on the fly, by using the service ```/obj_detect_publisher_node/set_target_object```
+
+```bash
+$ rosservice call /obj_detect_publisher_node/set_target_object "label: <string> instance_id: <int>"
+```
 
 #### Recording ZED Node:
 ```bash
-$ rosrun zion_zed_ros_interface zed_recording_node.py
+$ roslaunch zion_zed_ros_interface zed_recording.launch
 ```
 
-- The node is starting a recording session of the topics specified in the ```zion_zed_ros_interface/params/record.yaml```. Adjust this file if needed. You can use CLI to choose different destination folder prefix and select the list of topics you manage to record. 
+- This command will launch the ```zed_recording_node``` which start a recording session of the topics specified in the ```zion_zed_ros_interface/params/record.yaml```. Adjust this file if needed. You can use CLI to choose different destination folder prefix and select the list of topics you manage to record. 
 - Select start/stop recording by using the service ```~record ``` as follow:
 ```bash
 $ rosservice call /zion/zed_recording_node/record "data: false" # false -> stop recording
                                                                 # true -> start recording
 ```
 
-
 - Stopping record will terminate the rosbag record and save the bag but the recording node will keep spinning such that you can record again by using the service
-
 
 ---
 
