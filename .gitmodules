@@ -7,3 +7,6 @@
 [submodule "zion_turtlebot3"]
 	path = zion_turtlebot3
 	url = git@github.com:nimiCurtis/zion_turtlebot3.git
+[submodule "zion_go2"]
+	path = zion_go2
+	url = git@github.com:nimiCurtis/zion_go2.git
